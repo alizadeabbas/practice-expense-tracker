@@ -1,0 +1,17 @@
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter button {
+    flex: 0 0 auto;
+}
+
+.filter button.active {
+    background: rgba(15, 23, 42, 0.9);
+    color: #e5e7eb;
+    box-shadow:
+        0 0 0 1px rgba(75, 85, 99, 0.8),
+        0 10px 25px rgba(15, 23, 42, 0.7);
+}

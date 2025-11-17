@@ -1,0 +1,48 @@
+.taransaction-form {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.2fr) minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.taransaction-form input,
+.taransaction-form select {
+  width: 100%;
+  padding: 9px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: rgba(15, 23, 42, 0.95);
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.taransaction-form input::placeholder {
+  color: #6b7280;
+}
+
+.taransaction-form input:focus,
+.taransaction-form select:focus {
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 0 1px rgba(56, 189, 248, 0.6),
+    0 0 0 6px rgba(56, 189, 248, 0.15);
+  background: rgba(15, 23, 42, 1);
+}
+
+.taransaction-form button {
+  white-space: nowrap;
+  padding-inline: 18px;
+}
+
+/* Mobile üçün */
+@media (max-width: 720px) {
+  .taransaction-form {
+    grid-template-columns: 1fr;
+  }
+}
