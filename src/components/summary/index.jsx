@@ -8,7 +8,7 @@ const Summary = ({ transactions }) => {
     return (
         <div className="summary">
             <p><strong> Income: <span>{income}</span> AZN</strong> -
-                <strong> Expence: <span>{totalExpense}</span> AZN</strong> -
+                <strong> Expense: <span>{totalExpense}</span> AZN</strong> -
                 <strong> Balance: <span>{balance}</span>  AZN</strong></p>
         </div>
     )

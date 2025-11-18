@@ -20,6 +20,8 @@ function App() {
     id: 2
   }]);
 
+  console.log("first" , transactions)
+
   const filteredTransactions = useMemo(() => {
     if (filter === "all") return transactions;
     return transactions.filter(item => item.type === filter)
@@ -27,6 +29,10 @@ function App() {
 
   const onDelete = (id) => {
     setTransactions(prev => prev.filter(item => item.id !== id))
+  };
+
+  const handleAdd = (newItem) => {
+    setTransactions(prev => [...prev, newItem])
   }
 
   return (
@@ -34,7 +40,7 @@ function App() {
       <Header />
       <Summary transactions={transactions} />
       <Filter setFilter={setFilter} />
-      <TransactionForm />
+      <TransactionForm onAdd={handleAdd} />
       <TransactionList transactions={filteredTransactions} onDelete={onDelete} />
     </div>
   );
